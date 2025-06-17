@@ -2,36 +2,42 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bradley Landim - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bradley Landim - Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">Bradley</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Bradley Landim</h1>
-  <nav>
-    <a href="index.html" class="active">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="projects.html">Projets</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <main class="hero">
+    <section class="intro">
+      <div class="text">
+        <h1>Bradley Landim</h1>
+        <p>Étudiant en BUT Informatique à l'Université Sorbonne Paris Nord</p>
+        <p>Spécialisé en développement système, réseau et cybersécurité</p>
+        <a href="cv.html" class="btn">Voir mon CV</a>
+      </div>
+      <div class="photo">
+        <img src="assets/img/bradley.jpg" alt="Photo de Bradley" />
+      </div>
+    </section>
+  </main>
 
-<main>
-  <section id="presentation" class="centered">
-    <h2>Bienvenue sur mon portfolio</h2>
-    <p>Je suis étudiant en informatique à l'Université Sorbonne Paris Nord.</p>
-    <p>Passionné par le développement, la cybersécurité, et la programmation système.</p>
-    <img src="https://via.placeholder.com/200.png?text=Photo+Bradley" alt="Photo de Bradley Landim" />
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Bradley Landim. Tous droits réservés.
-</footer>
-
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Bradley Landim. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
