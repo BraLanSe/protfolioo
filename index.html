@@ -3,295 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio de Bradley Landim</title>
-  <style>
-    /* Reset & basiques */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: #f5f7fa;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Navigation */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: #222;
-      color: #fff;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav a {
-      margin-left: 20px;
-      font-weight: 600;
-      color: white;
-    }
-    nav a.active {
-      border-bottom: 2px solid #ff9900;
-      padding-bottom: 2px;
-    }
-
-    /* Sections */
-    section {
-      max-width: 900px;
-      margin: 90px auto 60px; /* marge top pour laisser place au header fixe */
-      padding: 0 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 30px 40px;
-    }
-    section h2 {
-      margin-top: 0;
-      color: #007bff;
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 8px;
-    }
-
-    /* Image profil */
-    #presentation img {
-      display: block;
-      max-width: 200px;
-      width: 100%;
-      border-radius: 50%;
-      margin-top: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    /* Projets */
-    .project {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-    .project:last-child {
-      border-bottom: none;
-    }
-    .project h3 {
-      margin-bottom: 5px;
-      color: #333;
-    }
-    .project p.type {
-      font-style: italic;
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    /* Form Contact */
-    form {
-      max-width: 500px;
-      margin-top: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      resize: vertical;
-    }
-    button {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-    #contact-message {
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: white;
-      font-size: 0.9rem;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
-    }
-
-    /* Responsive */
-    @media(max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-      }
-      nav {
-        margin-top: 10px;
-      }
-      nav a {
-        margin-left: 0;
-        margin-right: 15px;
-      }
-      section {
-        margin: 110px 15px 80px;
-        padding: 20px;
-      }
-    }
-  </style>
+  <title>Bradley Landim - Accueil</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header>
   <h1>Bradley Landim</h1>
-  <nav id="navbar">
-    <a href="#presentation" class="active">Accueil</a>
-    <a href="#about">À propos</a>
-    <a href="#projects">Projets</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
+  <nav>
+    <a href="index.html" class="active">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="projects.html">Projets</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <main>
-
-  <section id="presentation">
+  <section id="presentation" class="centered">
     <h2>Bienvenue sur mon portfolio</h2>
     <p>Je suis étudiant en informatique à l'Université Sorbonne Paris Nord.</p>
     <p>Passionné par le développement, la cybersécurité, et la programmation système.</p>
     <img src="https://via.placeholder.com/200.png?text=Photo+Bradley" alt="Photo de Bradley Landim" />
   </section>
-
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p>Je m'appelle Bradley Landim, né en novembre 2003. J’étudie actuellement en BUT Informatique à l’Université Sorbonne Paris Nord.</p>
-    <p>Mes centres d’intérêt : cuisine asiatique et africaine, séries et films fantastiques, natation.</p>
-
-    <h3>Mon parcours universitaire</h3>
-    <p>Je prépare un BUT Informatique avec une spécialisation en développement système et réseau, avec un projet professionnel orienté cybersécurité.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projets scolaires et personnels</h2>
-
-    <div class="project">
-      <h3>Application Web d'Annotation de Messages</h3>
-      <p class="type">Projet scolaire</p>
-      <p>Application pour annoter des messages avec des émotions, réalisée en PHP et JavaScript.</p>
-    </div>
-
-    <div class="project">
-      <h3>Application de Messagerie Temps Réel</h3>
-      <p class="type">Projet personnel</p>
-      <p>Système de messagerie avec WebSocket, annotations d’émotions et interface AJAX.</p>
-    </div>
-  </section>
-
-  <section id="cv">
-    <h2>Mon CV</h2>
-    <p>Téléchargez mon CV au format PDF :</p>
-    <a href="data/cv.pdf" download>Télécharger le CV</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contactez-moi</h2>
-    <form id="contact-form" novalidate>
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
-    <div id="contact-message"></div>
-  </section>
-
 </main>
 
 <footer>
   &copy; 2025 Bradley Landim. Tous droits réservés.
 </footer>
 
-<script>
-  // Gestion active link de la nav selon scroll
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 70;
-      const sectionHeight = section.clientHeight;
-      if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if(link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  });
-
-  // Gestion formulaire contact (simulation)
-  const form = document.getElementById('contact-form');
-  const contactMessage = document.getElementById('contact-message');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Simple validation HTML5 + message de confirmation
-    if(form.checkValidity()) {
-      contactMessage.style.color = 'green';
-      contactMessage.textContent = "Merci pour votre message, je vous répondrai rapidement.";
-      form.reset();
-    } else {
-      contactMessage.style.color = 'red';
-      contactMessage.textContent = "Veuillez remplir correctement tous les champs.";
-    }
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
