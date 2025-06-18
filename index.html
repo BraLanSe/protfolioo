@@ -24,6 +24,22 @@
     }
     nav ul.menu li a {
       color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    nav ul.menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .btn {
       background-color: #6c4bbf;
@@ -33,28 +49,68 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 1rem;
     }
     .btn:hover {
       background-color: #5b3fa3;
     }
     h2 {
       color: #6c4bbf;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 3px solid #6c4bbf;
+      padding-bottom: 0.3rem;
     }
-    .card {
-      border-left: 6px solid #6c4bbf;
-      background-color: #ffffff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.2rem;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      max-width: 750px;
+    }
+    .profile-pic {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .skills ul {
+      list-style-type: none;
+      padding-left: 0;
+      max-width: 750px;
+    }
+    .skills ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .skills ul li::marker {
+      color: #6c4bbf;
+    }
+    .contact a {
+      color: #6c4bbf;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
     }
     footer {
       background-color: #6c4bbf;
       color: white;
       text-align: center;
-      padding: 1rem;
-    }
-    .skills ul li::marker {
-      color: #6c4bbf;
+      padding: 1rem 0;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -63,66 +119,54 @@
   <header>
     <nav>
       <div class="logo">Bradley</div>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="burger">&#9776;</label>
       <ul class="menu">
         <li><a href="#home">Accueil</a></li>
         <li><a href="#about">À propos</a></li>
-        <li><a href="projects.html">Mes Projets</a></li>
+        <li><a href="#goals">Objectifs</a></li>
+        <li><a href="#skills">Compétences</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="projets.html">Détails Projets</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Bradley Landim</h1>
-      <p>Développeur Système & Cybersécurité</p>
-      <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank">Télécharger mon CV</a>
-    </div>
+    <h2>Accueil</h2>
+    <h1>Bradley Landim</h1>
+    <p>Développeur Système & Cybersécurité</p>
+    <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank" rel="noopener">Télécharger mon CV</a>
   </section>
 
   <section id="about" class="about">
     <h2>À propos</h2>
-    <img src="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/Screenshot_20250617_160012_Gallery.jpg" alt="Bradley Landim" style="max-width: 200px; border-radius: 50%; margin-bottom: 1rem;">
-    <p>Je m'appelle Bradley Landim, étudiant en BUT Informatique à l'Université Sorbonne Paris Nord. Passionné par les systèmes informatiques, la programmation bas-niveau, les réseaux et la cybersécurité, j’ai acquis des compétences techniques solides au fil de mes projets académiques et personnels. Mon objectif est de devenir un expert en cybersécurité, capable d’intervenir dans des environnements critiques et complexes.</p>
-    <p>Le BUT Informatique est une formation en trois ans axée sur la conception, le développement et la sécurisation d'applications informatiques. Elle mêle théorie et pratique avec des projets concrets, des périodes en entreprise et une spécialisation progressive. Cette formation m’a permis d’approfondir mes connaissances en développement, systèmes, bases de données et sécurité, tout en développant des compétences professionnelles essentielles comme le travail en équipe et la gestion de projet.</p>
-
-<section id="goals" class="goals">
-  <h2>Objectifs après le BUT</h2>
-  <p>
-    Après l’obtention de mon BUT Informatique, je souhaite me spécialiser dans le domaine de la cybersécurité ou du développement système. Mon objectif est d’intégrer un Master ou une école d’ingénieur afin d’approfondir mes compétences techniques, notamment en sécurité réseau, cryptographie, systèmes embarqués et audit informatique.  
-    Mon ambition est de contribuer à la protection des infrastructures informatiques en entreprise, en alliant performance, rigueur et innovation. J’aspire également à travailler sur des projets à fort impact sociétal et technologique, en France ou à l’international.
-  </p>
-</section>
-
-    
-    <div class="skills">
-      <h3>Compétences</h3>
-      <ul>
-        <li><strong>Langages :</strong> Python, C, PHP, JavaScript, SQL</li>
-        <li><strong>Frameworks & Libs :</strong> Bootstrap, WebSocket, PHPMailer</li>
-        <li><strong>Outils :</strong> Git, Docker, Linux, VSCode</li>
-        <li><strong>Compétences techniques :</strong> Programmation système, gestion réseau, cybersécurité, développement web full-stack</li>
-        <li><strong>Soft skills :</strong> Autonomie, curiosité, travail d’équipe, communication</li>
-      </ul>
-    </div>
+    <img src="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/Screenshot_20250617_160012_Gallery.jpg" alt="Bradley Landim" class="profile-pic" />
+    <p>Je m'appelle Bradley Landim, étudiant en BUT Informatique à l'Université Sorbonne Paris Nord. Passionné par le développement système, les réseaux et la cybersécurité, j’ai acquis au fil de ma formation et mes projets des compétences techniques solides ainsi qu’une grande rigueur professionnelle. La formation BUT Informatique est un cursus professionnalisant de trois ans, centré sur la conception, le développement et la sécurisation d’applications informatiques. Elle combine cours théoriques, projets pratiques et stages en entreprise, permettant d’intégrer parfaitement la réalité du monde professionnel.</p>
   </section>
 
+  <section id="goals" class="goals">
+    <h2>Objectifs</h2>
+    <p>Après l’obtention de mon BUT Informatique, je souhaite me spécialiser dans la cybersécurité ou le développement système. Mon objectif est d’intégrer un Master ou une école d’ingénieur pour approfondir mes compétences techniques, notamment en sécurité réseau, cryptographie, systèmes embarqués et audit informatique. Je vise à contribuer efficacement à la protection des infrastructures informatiques, tout en participant à des projets à fort impact technologique et sociétal, en France ou à l’international.</p>
+  </section>
 
+  <section id="skills" class="skills">
+    <h2>Compétences</h2>
+    <ul>
+      <li><strong>Langages :</strong> Python, C, PHP, JavaScript, SQL</li>
+      <li><strong>Outils :</strong> Linux, Git, Docker, WebSocket, PHPMailer</li>
+      <li><strong>Frameworks :</strong> Bootstrap, AJAX, jQuery</li>
+      <li><strong>Base de données :</strong> PostgreSQL, MySQL, vues matérialisées, JSON</li>
+      <li><strong>Domaine :</strong> Cybersécurité, développement système, réseau</li>
+      <li><strong>Soft skills :</strong> Autonomie, curiosité, travail en équipe, communication</li>
+    </ul>
+  </section>
 
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Vou pouvez me contacter via les moyens suivants :</p>
-  <ul class="contact-info">
-    <li><strong>Téléphone :</strong> <a href="tel:+33641935883">06 41 93 58 83</a></li>
-    <li><strong>Email :</strong> <a href="mailto:bradlandim65@gmail.com">bradlandim65@gmail.com</a></li>
-    <li><strong>Adresse :</strong>Seine-et-Marne (77), Ile-De-France</li>
-    <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/bradley-landim" target="_blank" rel="noopener">linkedin.com/in/bradley-landim</a></li>
-  </ul>
-</section>
-
-
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Téléphone : <a href="tel:+33641935883">06 41 93 58 83</a></p>
+    <p>Email : <a href="mailto:bradlandim65@gmail.com">bradlandim65@gmail.com</a></p>
+    <p>Adresse : Champs-Sur-Marne, Seine-et-Marne (77), Île-de-France</p>
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/bradley-landim" target="_blank" rel="noopener">linkedin.com/in/bradley-landim</a></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Bradley Landim. Tous droits réservés.</p>
