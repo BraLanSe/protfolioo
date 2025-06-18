@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bradley | Projets</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -37,9 +37,14 @@
     .project h2 {
       margin-top: 0;
       color: #6c4bbf;
+      cursor: pointer;
     }
     .project p {
       margin: 0.5rem 0;
+    }
+    .details {
+      display: none;
+      margin-top: 0.5rem;
     }
     .back-link {
       display: block;
@@ -59,27 +64,66 @@
   </header>
 
   <section class="projects">
-    <div class="project">
-      <h2>Application de Messagerie</h2>
+    <div class="project" onclick="toggleDetails(this)">
+      <h2 id="messagerie">Application de Messagerie</h2>
       <p>Une messagerie en temps réel avec WebSocket, annotation d’émotions, AJAX et PHP.</p>
-      <p>Fonctionnalités : envoi/lecture instantanée, analyse émotionnelle, interface dynamique.</p>
+      <div class="details">
+        <p>Fonctionnalités :</p>
+        <ul>
+          <li>Système d'inscription sécurisé avec vérification par email (PHPMailer)</li>
+          <li>Connexion et sessions utilisateur</li>
+          <li>Messagerie instantanée via WebSocket (sans rafraîchissement)</li>
+          <li>Interface dynamique en AJAX et JavaScript</li>
+          <li>Annotation automatique des émotions d’un message à l’aide d’un modèle de classification (émotions positives, neutres, négatives)</li>
+          <li>Design responsive et personnalisé</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="project">
-      <h2>Gestion de Notes</h2>
-      <p>Projet académique en SQL : normalisation, vues matérialisées, données JSON, types composites, agrégations.</p>
-      <p>Objectif : simuler un système de notation pour des modules avec traitements complexes.</p>
+    <div class="project" onclick="toggleDetails(this)">
+      <h2 id="notes">Gestion de Notes</h2>
+      <p>Projet académique en SQL : normalisation, vues matérialisées, données JSON, types composites, agrégats.</p>
+      <div class="details">
+        <p>Contenu :</p>
+        <ul>
+          <li>Modélisation de la base : relations entre étudiants, modules, notes</li>
+          <li>Utilisation de vues pour simplifier la consultation</li>
+          <li>Calculs statistiques avec fonctions SQL (moyennes, max, min par module)</li>
+          <li>Types JSON pour stocker les détails des évaluations</li>
+          <li>Création de fonctions PL/pgSQL pour automatiser les calculs</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="project">
-      <h2>Simulation de l'Algorithme du Simplexe</h2>
+    <div class="project" onclick="toggleDetails(this)">
+      <h2 id="simplexe">Simulation de l'Algorithme du Simplexe</h2>
       <p>Implémentation manuelle de l’algorithme du simplexe en Python, avec toutes les étapes détaillées.</p>
-      <p>But : comprendre et appliquer l’optimisation linéaire en deux phases.</p>
+      <div class="details">
+        <p>Objectifs :</p>
+        <ul>
+          <li>Comprendre le fonctionnement du simplexe à deux phases</li>
+          <li>Développer un algorithme pas à pas sans bibliothèque externe</li>
+          <li>Affichage des tableaux intermédiaires pour chaque itération</li>
+          <li>Résolution de cas complexes d’optimisation linéaire</li>
+          <li>Utilisation en terminal avec saisie des données via fichiers ou interface</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <div class="back-link">
     <a href="index.html">← Retour à l'accueil</a>
   </div>
+
+  <script>
+    function toggleDetails(projectElement) {
+      const details = projectElement.querySelector('.details');
+      if (details.style.display === 'block') {
+        details.style.display = 'none';
+      } else {
+        details.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
