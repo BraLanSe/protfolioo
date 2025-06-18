@@ -2,10 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bradley | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -17,10 +16,20 @@
       background-color: #6c4bbf;
       padding: 1rem 2rem;
       color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
+    }
+    nav ul.menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
     }
     nav ul.menu li a {
       color: white;
@@ -28,149 +37,98 @@
       font-weight: bold;
       padding: 0 10px;
     }
-    nav ul.menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    nav ul.menu li a:hover {
+      text-decoration: underline;
     }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .btn {
-      background-color: #6c4bbf;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    .btn:hover {
-      background-color: #5b3fa3;
-    }
-    h2 {
-      color: #6c4bbf;
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin-bottom: 0.6rem;
-      border-bottom: 3px solid #6c4bbf;
-      padding-bottom: 0.3rem;
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     h1 {
       font-size: 2.8rem;
       margin-bottom: 0.2rem;
+      color: #6c4bbf;
+    }
+    h2 {
+      color: #6c4bbf;
+      border-bottom: 3px solid #6c4bbf;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
     p {
+      font-size: 1.1rem;
       line-height: 1.5;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
       max-width: 750px;
     }
-    .profile-pic {
-      max-width: 200px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .skills ul {
-      list-style-type: none;
-      padding-left: 0;
-      max-width: 750px;
-    }
-    .skills ul li {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-    .skills ul li::marker {
-      color: #6c4bbf;
-    }
-    .contact a {
-      color: #6c4bbf;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto 3rem auto;
-    }
-    footer {
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.2rem;
       background-color: #6c4bbf;
       color: white;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #5b3fa3;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div class="logo">Bradley</div>
-      <ul class="menu">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#goals">Objectifs</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="projets.html">Détails Projets</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="home" class="hero">
-    <h2>Accueil</h2>
-    <h1>Bradley Landim</h1>
-    <p>Développeur Système & Cybersécurité</p>
-    <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank" rel="noopener">Télécharger mon CV</a>
-  </section>
-
-  <section id="about" class="about">
-    <h2>À propos</h2>
-    <img src="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/Screenshot_20250617_160012_Gallery.jpg" alt="Bradley Landim" class="profile-pic" />
-    <p>Je m'appelle Bradley Landim, étudiant en BUT Informatique à l'Université Sorbonne Paris Nord. Passionné par le développement système, les réseaux et la cybersécurité, j’ai acquis au fil de ma formation et mes projets des compétences techniques solides ainsi qu’une grande rigueur professionnelle. La formation BUT Informatique est un cursus professionnalisant de trois ans, centré sur la conception, le développement et la sécurisation d’applications informatiques. Elle combine cours théoriques, projets pratiques et stages en entreprise, permettant d’intégrer parfaitement la réalité du monde professionnel.</p>
-  </section>
-
-  <section id="goals" class="goals">
-    <h2>Objectifs</h2>
-    <p>Après l’obtention de mon BUT Informatique, je souhaite me spécialiser dans la cybersécurité ou le développement système. Mon objectif est d’intégrer un Master ou une école d’ingénieur pour approfondir mes compétences techniques, notamment en sécurité réseau, cryptographie, systèmes embarqués et audit informatique. Je vise à contribuer efficacement à la protection des infrastructures informatiques, tout en participant à des projets à fort impact technologique et sociétal, en France ou à l’international.</p>
-  </section>
-
-  <section id="skills" class="skills">
-    <h2>Compétences</h2>
-    <ul>
-      <li><strong>Langages :</strong> Python, C, PHP, JavaScript, SQL</li>
-      <li><strong>Outils :</strong> Linux, Git, Docker, WebSocket, PHPMailer</li>
-      <li><strong>Frameworks :</strong> Bootstrap, AJAX, jQuery</li>
-      <li><strong>Base de données :</strong> PostgreSQL, MySQL, vues matérialisées, JSON</li>
-      <li><strong>Domaine :</strong> Cybersécurité, développement système, réseau</li>
-      <li><strong>Soft skills :</strong> Autonomie, curiosité, travail en équipe, communication</li>
+<header>
+  <div class="logo">Bradley</div>
+  <nav>
+    <ul class="menu">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#goals">Objectifs</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="projets.html">Détails Projets</a></li>
     </ul>
-  </section>
+  </nav>
+</header>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Téléphone : <a href="tel:+33641935883">06 41 93 58 83</a></p>
-    <p>Email : <a href="mailto:bradlandim65@gmail.com">bradlandim65@gmail.com</a></p>
-    <p>Adresse :Seine-et-Marne (77), Île-de-France</p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/bradley-landim" target="_blank" rel="noopener">linkedin.com/in/bradley-landim</a></p>
-  </section>
+<section id="home">
+  <h2>Accueil</h2>
+  <h1>Bradley Landim</h1>
+  <p>Développeur Système & Cybersécurité</p>
+  <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank" rel="noopener">Télécharger mon CV</a>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Bradley Landim. Tous droits réservés.</p>
-  </footer>
+<section id="about">
+  <h2>À propos</h2>
+  <p>Je m'appelle Bradley Landim, étudiant en BUT Informatique à l'Université Sorbonne Paris Nord. Passionné par le développement système, les réseaux et la cybersécurité, j’ai acquis au fil de ma formation et mes projets des compétences techniques solides ainsi qu’une grande rigueur professionnelle.</p>
+</section>
+
+<section id="goals">
+  <h2>Objectifs</h2>
+  <p>Après l’obtention de mon BUT Informatique, je souhaite me spécialiser dans la cybersécurité ou le développement système. Mon objectif est d’intégrer un Master ou une école d’ingénieur pour approfondir mes compétences techniques, notamment en sécurité réseau, cryptographie, systèmes embarqués et audit informatique.</p>
+</section>
+
+<section id="skills">
+  <h2>Compétences</h2>
+  <ul>
+    <li><strong>Langages :</strong> Python, C, PHP, JavaScript, SQL</li>
+    <li><strong>Outils :</strong> Linux, Git, Docker, WebSocket, PHPMailer</li>
+    <li><strong>Frameworks :</strong> Bootstrap, AJAX, jQuery</li>
+    <li><strong>Base de données :</strong> PostgreSQL, MySQL, vues matérialisées, JSON</li>
+    <li><strong>Domaine :</strong> Cybersécurité, développement système, réseau</li>
+    <li><strong>Soft skills :</strong> Autonomie, curiosité, travail en équipe, communication</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Téléphone : <a href="tel:+33641935883">06 41 93 58 83</a></p>
+  <p>Email : <a href="mailto:bradlandim65@gmail.com">bradlandim65@gmail.com</a></p>
+  <p>Adresse :Seine-et-Marne (77), Île-de-France</p>
+  <p>LinkedIn : <a href="https://www.linkedin.com/in/bradley-landim" target="_blank" rel="noopener">linkedin.com/in/bradley-landim</a></p>
+</section>
 
 </body>
 </html>
