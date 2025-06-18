@@ -2,136 +2,84 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bradley | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset et base */
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f3f0fa;
+      background: #f7f5fa;
       color: #2d2d2d;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    /* Header */
     header {
-      background-color: #5a3ea8;
-      color: white;
+      background-color: #6c4bbf;
       padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(90, 62, 168, 0.7);
+      color: white;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul.menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    nav ul.menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
     nav {
-      max-width: 900px;
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .logo {
-      font-size: 1.7rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      user-select: none;
-    }
-    ul.menu {
-      list-style: none;
-      display: flex;
-      gap: 1.3rem;
-      margin: 0;
-      padding: 0;
-    }
-    ul.menu li a {
+    .btn {
+      background-color: #6c4bbf;
       color: white;
-      font-weight: 700;
-      padding: 0.3rem 0.6rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 1rem;
     }
-    ul.menu li a:hover,
-    ul.menu li a:focus {
-      background-color: #8369ce;
-      outline: none;
-    }
-    /* Section styles */
-    section {
-      max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 0 1rem;
-    }
-    h1, h2, h3 {
-      color: #5a3ea8;
-      margin-bottom: 0.6rem;
-      font-weight: 800;
-      user-select: none;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.3rem;
+    .btn:hover {
+      background-color: #5b3fa3;
     }
     h2 {
-      font-size: 2.2rem;
-      border-bottom: 4px solid #5a3ea8;
-      padding-bottom: 0.4rem;
-      margin-bottom: 1.2rem;
+      color: #6c4bbf;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 3px solid #6c4bbf;
+      padding-bottom: 0.3rem;
     }
-    h3 {
-      font-size: 1.5rem;
-      cursor: pointer;
-      user-select: none;
-      transition: color 0.3s ease;
-    }
-    h3:hover {
-      color: #8369ce;
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.2rem;
     }
     p {
+      line-height: 1.5;
       font-size: 1.1rem;
       margin-bottom: 1rem;
       max-width: 750px;
     }
-    /* Hero */
-    .hero p {
-      font-weight: 600;
-      font-size: 1.3rem;
-      color: #4b3a87;
-      margin-bottom: 1.6rem;
-    }
-    .btn {
-      background-color: #5a3ea8;
-      color: white;
-      padding: 0.9rem 1.6rem;
-      border: none;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 6px 10px rgba(90, 62, 168, 0.6);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      display: inline-block;
-      user-select: none;
-    }
-    .btn:hover, .btn:focus {
-      background-color: #8369ce;
-      box-shadow: 0 8px 15px rgba(131, 105, 206, 0.8);
-      outline: none;
-    }
-    /* Profile picture */
     .profile-pic {
       max-width: 200px;
       border-radius: 50%;
-      margin-bottom: 1.4rem;
-      box-shadow: 0 4px 12px rgba(90, 62, 168, 0.5);
+      margin-bottom: 1rem;
+      display: block;
     }
-    /* Skills list */
     .skills ul {
       list-style-type: none;
       padding-left: 0;
@@ -142,61 +90,27 @@
       font-size: 1.1rem;
     }
     .skills ul li::marker {
-      color: #5a3ea8;
+      color: #6c4bbf;
     }
-    /* Contact */
     .contact a {
-      color: #5a3ea8;
-      font-weight: 700;
+      color: #6c4bbf;
+      text-decoration: none;
+      font-weight: 600;
     }
-    .contact a:hover, .contact a:focus {
+    .contact a:hover {
       text-decoration: underline;
-      outline: none;
     }
-    /* Footer */
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+    }
     footer {
-      background-color: #5a3ea8;
+      background-color: #6c4bbf;
       color: white;
       text-align: center;
       padding: 1rem 0;
-      font-size: 0.95rem;
-      margin-top: auto;
-      user-select: none;
-      box-shadow: 0 -2px 6px rgba(90, 62, 168, 0.7);
-    }
-    /* Projects */
-    .projects .project {
-      background: white;
-      border-left: 8px solid #5a3ea8;
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 12px rgba(90, 62, 168, 0.15);
-      transition: box-shadow 0.3s ease;
-      cursor: pointer;
-      user-select: none;
-    }
-    .projects .project:hover {
-      box-shadow: 0 12px 22px rgba(90, 62, 168, 0.3);
-    }
-    .projects .project p {
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-top: 0;
-    }
-    .projects .details {
-      margin-top: 0.7rem;
-      display: none;
-      font-weight: 400;
-      font-size: 1rem;
-      color: #4b3a87;
-    }
-    .projects .details ul {
-      padding-left: 1.4rem;
-      margin-top: 0.5rem;
-    }
-    .projects .details ul li {
-      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -210,8 +124,8 @@
         <li><a href="#about">À propos</a></li>
         <li><a href="#goals">Objectifs</a></li>
         <li><a href="#skills">Compétences</a></li>
-        <li><a href="#projets">Détails Projets</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="projects.html">Détails Projets</a></li>
       </ul>
     </nav>
   </header>
@@ -220,7 +134,7 @@
     <h2>Accueil</h2>
     <h1>Bradley Landim</h1>
     <p>Développeur Système & Cybersécurité</p>
-    <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank" rel="noopener noreferrer">Télécharger mon CV</a>
+    <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank" rel="noopener">Télécharger mon CV</a>
   </section>
 
   <section id="about" class="about">
@@ -246,63 +160,17 @@
     </ul>
   </section>
 
-  <section id="projets" class="projects">
-    <h2>Mes Projets</h2>
-
-    <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
-      <h3>Application de Messagerie</h3>
-      <p>Messagerie en temps réel avec WebSocket, annotation d’émotions, AJAX et PHP.</p>
-      <div class="details">
-        <ul>
-          <li>Système d'inscription sécurisé avec vérification par email (PHPMailer)</li>
-          <li>Connexion et sessions utilisateur</li>
-          <li>Messagerie instantanée via WebSocket (sans rafraîchissement)</li>
-          <li>Interface dynamique en AJAX et JavaScript</li>
-          <li>Annotation automatique des émotions</li>
-          <li>Design responsive et ergonomique</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
-      <h3>Projet SAÉ S4</h3>
-      <p>Application web d’annotation de messages pour services clients.</p>
-      <div class="details">
-        <ul>
-          <li>Interface utilisateur intuitive pour annoter des messages</li>
-          <li>Gestion de bases de données relationnelles normalisées</li>
-          <li>Utilisation avancée de SQL (vues, JSON, agrégations)</li>
-          <li>Développement front-end en JavaScript et AJAX</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Ajoute d'autres projets ici si besoin -->
-  </section>
-
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Vous pouvez me contacter par :</p>
-    <ul>
-      <li>Téléphone : <a href="tel:+33641935883">06 41 93 58 83</a></li>
-      <li>Email : <a href="mailto:bradlandim65@gmail.com">bradlandim65@gmail.com</a></li>
-      <li>LinkedIn : <a href="https://www.linkedin.com/in/bradley-landim" target="_blank" rel="noopener noreferrer">linkedin.com/in/bradley-landim</a></li>
-    </ul>
+    <p>Téléphone : <a href="tel:+33641935883">06 41 93 58 83</a></p>
+    <p>Email : <a href="mailto:bradlandim65@gmail.com">bradlandim65@gmail.com</a></p>
+    <p>Adresse : Seine-et-Marne (77), Île-de-France</p>
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/bradley-landim" target="_blank" rel="noopener">linkedin.com/in/bradley-landim</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Bradley Landim - Tous droits réservés
+    <p>&copy; 2025 Bradley Landim. Tous droits réservés.</p>
   </footer>
 
-  <script>
-    function toggleDetails(projectElement) {
-      const details = projectElement.querySelector('.details');
-      if (details.style.display === 'block') {
-        details.style.display = 'none';
-      } else {
-        details.style.display = 'block';
-      }
-    }
-  </script>
 </body>
 </html>
