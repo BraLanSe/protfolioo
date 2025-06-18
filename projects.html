@@ -79,16 +79,17 @@
 
   <section class="projects">
 
-    <div class="project" onclick="toggleDetails(this)">
-      <h2>Application de Messagerie</h2>
-      <p>Une messagerie en temps réel avec WebSocket, annotation d’émotions, AJAX et PHP.</p>
+    <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
+      <h2>Application de Messagerie & Annotation d’Émotions</h2>
+      <p>Messagerie instantanée en temps réel avec annotation des messages par émotions, utilisée pour améliorer le service client.</p>
       <div class="details">
         <p><strong>Fonctionnalités :</strong></p>
         <ul>
           <li>Système d'inscription sécurisé avec vérification par email (PHPMailer).</li>
           <li>Connexion et gestion des sessions utilisateur.</li>
           <li>Envoi et réception de messages en temps réel via WebSocket.</li>
-          <li>Annotation des messages avec des émotions (positif, neutre, négatif).</li>
+          <li>Annotation des messages avec des émotions (positif, neutre, négatif) grâce à une interface intuitive.</li>
+          <li>Visualisation des statistiques d’émotions et export des données annotées au format JSON.</li>
           <li>Interface utilisateur responsive avec AJAX pour mises à jour sans rechargement.</li>
           <li>Stockage des messages et annotations dans une base de données PostgreSQL.</li>
         </ul>
@@ -96,32 +97,34 @@
       </div>
     </div>
 
-    <div class="project" onclick="toggleDetails(this)">
-      <h2>Projet SAÉ S4 - Annotation de Messages</h2>
-      <p>Application web d’annotation des messages avec des émotions, utilisée pour le service client.</p>
-      <div class="details">
-        <p><strong>Description :</strong> Développement d’un outil permettant aux utilisateurs de classifier les messages selon leur émotion exprimée afin d’améliorer la qualité du support client.</p>
-        <p><strong>Fonctionnalités :</strong></p>
-        <ul>
-          <li>Interface intuitive pour annotation rapide.</li>
-          <li>Visualisation des statistiques par émotion.</li>
-          <li>Export des données annotées au format JSON.</li>
-        </ul>
-        <p><strong>Technologies :</strong> PHP, JavaScript, AJAX, PostgreSQL, JSON.</p>
-      </div>
-    </div>
-
-    <div class="project" onclick="toggleDetails(this)">
-      <h2>Stage chez EDF</h2>
-      <p>Stage de découverte et mise en œuvre de solutions informatiques dans un environnement industriel.</p>
+    <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
+      <h2>Stage chez EDF – Création SharePoint & Gestion de Projet</h2>
+      <p>Stage en milieu industriel pour la création d’un site SharePoint dédié à l’équipe RH et la gestion de projets.</p>
       <div class="details">
         <p><strong>Tâches réalisées :</strong></p>
         <ul>
-          <li>Automatisation de tâches de surveillance système.</li>
-          <li>Analyse et amélioration des performances réseaux.</li>
-          <li>Participation aux audits de sécurité informatique.</li>
+          <li>Création et personnalisation d’un site SharePoint pour l’équipe RH.</li>
+          <li>Mise en place d’outils collaboratifs pour le suivi des projets.</li>
+          <li>Documentation et formation des utilisateurs internes.</li>
+          <li>Participation à l’organisation et à la coordination des projets.</li>
         </ul>
-        <p><strong>Compétences développées :</strong> Administration système Linux, scripting, travail en équipe, sécurité des systèmes industriels.</p>
+        <p><strong>Compétences développées :</strong> Gestion de projet, outils collaboratifs, communication d’équipe, environnement professionnel industriel.</p>
+      </div>
+    </div>
+
+    <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
+      <h2>Projet de Première Année – Base de Données avec MariaDB</h2>
+      <p>Création et peuplement d’une base de données relationnelle avec MariaDB.</p>
+      <div class="details">
+        <p><strong>Objectifs :</strong> Concevoir une base de données normalisée, créer les tables, insérer des données et réaliser des requêtes SQL.</p>
+        <p><strong>Fonctionnalités :</strong></p>
+        <ul>
+          <li>Modélisation conceptuelle et logique des données.</li>
+          <li>Création des tables avec contraintes d’intégrité.</li>
+          <li>Peuplement de la base avec des données test.</li>
+          <li>Rédaction de requêtes SQL pour extraction et analyse des données.</li>
+        </ul>
+        <p><strong>Technologies :</strong> MariaDB, SQL, modélisation UML.</p>
       </div>
     </div>
 
