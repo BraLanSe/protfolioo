@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f7f5fa;
+      background: #f7f5fa;<nav class="nav-links">
       color: #2d2d2d;
     }
     header {
@@ -112,38 +112,49 @@
       padding: 1rem 0;
       font-size: 0.9rem;
     }
-    .menu-toggle {
+header {
+  position: relative;
+}
+
+.menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 2rem;
   color: white;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: #6c4bbf;
-    padding: 1rem;
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
+    padding: 1rem;
   }
 
   .nav-links.show {
     display: flex;
   }
+
+  .nav-links a {
+    padding: 0.5rem 0;
+    color: white;
+    text-align: center;
+  }
 }
+
 
   </style>
 </head>
@@ -205,6 +216,13 @@
   <footer>
     <p>&copy; 2025 Bradley Landim. Tous droits réservés.</p>
   </footer>
+
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('show');
+  }
+</script>
 
 </body>
 </html>
