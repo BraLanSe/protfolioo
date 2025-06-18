@@ -159,6 +159,22 @@ footer {
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+.goals {
+  padding: 4rem 2rem;
+  background-color: #f5f0fa;
+  color: #3b005c;
+}
+
+.goals h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #5e2b97;
+}
+
+.goals p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
 
 @media (max-width: 768px) {
