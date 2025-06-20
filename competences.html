@@ -173,6 +173,18 @@
       const details = element.querySelector('.details');
       details.style.display = (details.style.display === 'block') ? 'none' : 'block';
     }
+
+    function toggleInnerDetails(element) {
+  event.stopPropagation(); // évite le conflit avec le clic principal
+  const innerDetails = element.querySelector('.details-inner');
+  if (innerDetails.style.display === 'block') {
+    innerDetails.style.display = 'none';
+  } else {
+    innerDetails.style.display = 'block';
+  }
+}
+
+    
   </script>
 </body>
 </html>
