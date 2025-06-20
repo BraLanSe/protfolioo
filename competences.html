@@ -1,58 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bradley | Compétences</title>
-  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f5fa;
+      color: #2d2d2d;
+    }
+    header {
+      background-color: #6c4bbf;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .back-button {
+      background-color: white;
+      color: #6c4bbf;
+      border: 2px solid #6c4bbf;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-button:hover {
+      background-color: #6c4bbf;
+      color: white;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      color: #6c4bbf;
+      cursor: pointer;
+    }
+    .skill-content {
+      display: none;
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    .skill-section {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <nav>
-      <div class="logo">Bradley</div>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="burger">&#9776;</label>
-      <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="competences.html">Compétences</a></li>
-      </ul>
-    </nav>
+    <h1>Compétences</h1>
+    <a class="back-button" href="index.html">Retour</a>
   </header>
-
-  <section class="skills-page">
-    <h1>Mes Compétences Informatiques</h1>
-
-    <p>Durant mes trois années de BUT Informatique à l'Université Sorbonne Paris Nord, j’ai acquis une solide base technique dans plusieurs domaines clés, que j’ai consolidée grâce à mon stage chez EDF, à mes projets universitaires et à mes recherches personnelles en cybersécurité.</p>
-
-    <h2>Développement</h2>
-    <p>J’ai commencé par maîtriser les langages de programmation comme <strong>Python</strong> pour l’algorithmique, <strong>C</strong> pour les structures bas niveau, et <strong>PHP/JavaScript</strong> pour le web. Ces compétences ont été mises en pratique dans la création d’une application de messagerie en temps réel, avec interface interactive, gestion des sessions et annotation d’émotions via AJAX et WebSocket.</p>
-
-    <h2>Base de données</h2>
-    <p>J’ai appris à concevoir et manipuler des bases relationnelles avec <strong>PostgreSQL</strong> et <strong>MariaDB</strong>. Grâce à des travaux pratiques poussés en SQL avancé (vues matérialisées, types composites, données JSON), j’ai réalisé un projet complet de gestion de notes avec analyses automatisées. J’ai aussi peuplé manuellement une base MariaDB dans un projet personnel de gestion d'informations.</p>
-
-    <h2>Systèmes et Réseaux</h2>
-    <p>À travers des modules spécialisés et des TP en environnement <strong>Linux</strong>, j’ai appris les bases de l’administration système (utilisateurs, droits, scripts Bash), la configuration réseau (DNS, DHCP, routage), et les bases du développement système. Ces acquis m’ont permis d’automatiser certaines tâches lors de mon stage.</p>
-
-    <h2>Cybersécurité</h2>
-    <p>Ma passion pour la cybersécurité m’a poussé à explorer des notions comme le chiffrement, l’analyse de paquets et la sécurité des sessions. J’ai renforcé mes connaissances avec des recherches personnelles sur les attaques courantes (XSS, CSRF, injection SQL) et les bonnes pratiques de sécurisation des formulaires et bases de données. Mon objectif est de me spécialiser pleinement dans ce domaine.</p>
-
-    <h2>Outils et Méthodes</h2>
-    <p>Je maîtrise des outils comme <strong>Git</strong> pour le versionnage, <strong>Docker</strong> pour les environnements isolés, et <strong>PHPMailer</strong> pour la gestion d'emails. J’ai également utilisé <strong>AJAX</strong> et <strong>jQuery</strong> pour améliorer l’expérience utilisateur sans rechargement de page. Tous ces outils ont été appliqués dans mes projets personnels et universitaires.</p>
-
-    <h2>Soft Skills</h2>
-    <p>Mon stage chez EDF, axé sur la création d’un SharePoint RH, m’a permis de développer des compétences en gestion de projet, en communication et en autonomie. Le travail en équipe, la rigueur et l’adaptabilité sont des atouts que j’ai cultivés durant tout mon parcours.</p>
-
-    <div class="back-link">
-      <a href="index.html">&larr; Retour à l'accueil</a>
+  <main>
+    <div class="skill-section">
+      <h2 onclick="toggleContent(this)">Développement</h2>
+      <div class="skill-content">
+        <p>J'ai appris les langages Python, C, PHP et JavaScript lors de ma formation et de projets personnels. J'ai développé une application de messagerie en temps réel utilisant WebSocket et AJAX, consolidant ainsi mes compétences en front-end et back-end.</p>
+      </div>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 Bradley Landim. Tous droits réservés.</p>
-  </footer>
+    <div class="skill-section">
+      <h2 onclick="toggleContent(this)">Base de données</h2>
+      <div class="skill-content">
+        <p>En cours, j'ai conçu et exploité des bases PostgreSQL et MariaDB. J'ai pratiqué des requêtes avancées (vues, agrégations, JSON) dans le cadre d'un projet d'analyse de résultats académiques et d'applications web.</p>
+      </div>
+    </div>
 
+    <div class="skill-section">
+      <h2 onclick="toggleContent(this)">Systèmes & Réseaux</h2>
+      <div class="skill-content">
+        <p>J'ai appris à utiliser Linux, à configurer des services réseau (DNS, DHCP) et à programmer des scripts Bash. Mon stage chez EDF m'a permis d'automatiser des tâches et d'interagir avec des outils internes dans un environnement réseau sécurisé.</p>
+      </div>
+    </div>
+
+    <div class="skill-section">
+      <h2 onclick="toggleContent(this)">Cybersécurité</h2>
+      <div class="skill-content">
+        <p>Passionné de cybersécurité, j'ai approfondi les notions de sécurité web, protections contre les injections SQL/XSS et pratiques de chiffrement. Je complète mes cours par des lectures et tests personnels sur des environnements virtualisés.</p>
+      </div>
+    </div>
+
+    <div class="skill-section">
+      <h2 onclick="toggleContent(this)">Outils & Collaboration</h2>
+      <div class="skill-content">
+        <p>Git, Docker, PHPMailer et jQuery font partie des outils que j'utilise dans mes projets. J'ai aussi acquis des compétences en gestion de projet et travail d'équipe grâce à mon stage et à la réalisation de SAÉs en groupe.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleContent(header) {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
