@@ -16,93 +16,106 @@
       background-color: #6c4bbf;
       color: white;
       padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      text-align: center;
     }
     header h1 {
       margin: 0;
     }
-    .back-button {
-      background-color: white;
-      color: #6c4bbf;
-      border: 2px solid #6c4bbf;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .back-button:hover {
-      background-color: #6c4bbf;
-      color: white;
-    }
-    main {
+    .container {
       max-width: 900px;
       margin: 2rem auto;
       padding: 1rem;
     }
-    h2 {
-      color: #6c4bbf;
+    .competence {
+      background-color: white;
+      border-left: 6px solid #6c4bbf;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    .skill-content {
+    .competence:hover {
+      background-color: #e6e0f7;
+    }
+    .competence h2 {
+      margin-top: 0;
+      color: #6c4bbf;
+    }
+    .details {
       display: none;
       margin-top: 0.5rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
     }
-    .skill-section {
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
+    .back-link {
+      display: block;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .back-link a {
+      color: #6c4bbf;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Compétences</h1>
-    <a class="back-button" href="index.html">Retour</a>
+    <h1>Mes Compétences</h1>
   </header>
-  <main>
-    <div class="skill-section">
-      <h2 onclick="toggleContent(this)">Développement</h2>
-      <div class="skill-content">
-        <p>J'ai appris les langages Python, C, PHP et JavaScript lors de ma formation et de projets personnels. J'ai développé une application de messagerie en temps réel utilisant WebSocket et AJAX, consolidant ainsi mes compétences en front-end et back-end.</p>
+  <div class="container">
+
+    <div class="competence" onclick="toggleDetails(this)">
+      <h2>Développement Web et Programmation</h2>
+      <div class="details">
+        <p>Durant ma formation en BUT Informatique, j’ai acquis de solides compétences en développement web, que j’ai mises en pratique à travers de nombreux projets universitaires. J’ai appris à concevoir des interfaces utilisateurs dynamiques en HTML, CSS et JavaScript, et à les rendre interactives à l’aide de PHP et AJAX. Ces langages me permettent aujourd’hui de créer des applications complètes côté client comme côté serveur.</p>
+        <p>En parallèle, mes recherches personnelles m’ont poussé à explorer plus en profondeur les frameworks modernes, les systèmes de templating et l’utilisation d’outils comme WebSocket pour créer une messagerie temps réel, que j’ai moi-même développée.</p>
       </div>
     </div>
 
-    <div class="skill-section">
-      <h2 onclick="toggleContent(this)">Base de données</h2>
-      <div class="skill-content">
-        <p>En cours, j'ai conçu et exploité des bases PostgreSQL et MariaDB. J'ai pratiqué des requêtes avancées (vues, agrégations, JSON) dans le cadre d'un projet d'analyse de résultats académiques et d'applications web.</p>
+    <div class="competence" onclick="toggleDetails(this)">
+      <h2>Bases de Données</h2>
+      <div class="details">
+        <p>J’ai appris à modéliser et manipuler des bases de données relationnelles durant mes cours, avec une approche rigoureuse de la normalisation et du langage SQL avancé. J’ai notamment utilisé PostgreSQL pour gérer le stockage des messages et annotations dans mes projets.</p>
+        <p>En première année, j’ai également réalisé un projet de création d’une base de données complète avec MariaDB, où j’ai conçu le schéma, écrit les requêtes de peuplement, et mis en place les relations entre les tables. Cela m’a permis de consolider ma compréhension des bases de données à la fois théoriquement et pratiquement.</p>
       </div>
     </div>
 
-    <div class="skill-section">
-      <h2 onclick="toggleContent(this)">Systèmes & Réseaux</h2>
-      <div class="skill-content">
-        <p>J'ai appris à utiliser Linux, à configurer des services réseau (DNS, DHCP) et à programmer des scripts Bash. Mon stage chez EDF m'a permis d'automatiser des tâches et d'interagir avec des outils internes dans un environnement réseau sécurisé.</p>
+    <div class="competence" onclick="toggleDetails(this)">
+      <h2>Travail en Équipe et Gestion de Projet</h2>
+      <div class="details">
+        <p>Mes expériences universitaires m’ont souvent amené à travailler en groupe, notamment dans le cadre des SAÉ (Situations d’Apprentissage et d'Évaluation). Ces projets collaboratifs m'ont appris à répartir les rôles, fixer des objectifs communs et à communiquer efficacement, tout en respectant des délais serrés.</p>
+        <p>J’ai approfondi ces compétences lors de mon stage chez EDF, où j’ai contribué à la création d’un site SharePoint pour l’équipe RH. Cette expérience m’a permis d’observer et d’appliquer des méthodes de gestion de projet dans un environnement professionnel, tout en collaborant avec différentes parties prenantes de manière efficace.</p>
+      </div>
+    </div>
+Voici comment créer une nouvelle page competences.html qui remplace la section "compétences" de index.html, avec une présentation détaillée et humanisée des compétences et de leur acquisition via ta formation, ton stage et tes projets personnels.
+    <div class="competence" onclick="toggleDetails(this)">
+      <h2>Autonomie et Apprentissage Personnel</h2>
+      <div class="details">
+        <p>Au-delà des cours, je consacre régulièrement du temps à apprendre par moi-même, que ce soit via des tutoriels, de la documentation technique ou des projets personnels. Cette habitude m’a permis d’être autonome dans mes démarches, de rester à jour sur les bonnes pratiques, et de progresser rapidement sur des sujets comme l’utilisation de PHPMailer pour l’envoi sécurisé d’emails ou encore l’intégration d’AJAX pour un rendu plus fluide.</p>
+        <p>Cette soif d’apprendre me pousse constamment à explorer de nouvelles technologies et à perfectionner celles que je maîtrise déjà.</p>
       </div>
     </div>
 
-    <div class="skill-section">
-      <h2 onclick="toggleContent(this)">Cybersécurité</h2>
-      <div class="skill-content">
-        <p>Passionné de cybersécurité, j'ai approfondi les notions de sécurité web, protections contre les injections SQL/XSS et pratiques de chiffrement. Je complète mes cours par des lectures et tests personnels sur des environnements virtualisés.</p>
-      </div>
+    <div class="back-link">
+      <a href="index.html">&larr; Retour à l'accueil</a>
     </div>
-
-    <div class="skill-section">
-      <h2 onclick="toggleContent(this)">Outils & Collaboration</h2>
-      <div class="skill-content">
-        <p>Git, Docker, PHPMailer et jQuery font partie des outils que j'utilise dans mes projets. J'ai aussi acquis des compétences en gestion de projet et travail d'équipe grâce à mon stage et à la réalisation de SAÉs en groupe.</p>
-      </div>
-    </div>
-  </main>
+  </div>
 
   <script>
-    function toggleContent(header) {
-      const content = header.nextElementSibling;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    function toggleDetails(element) {
+      const details = element.querySelector('.details');
+      if (details.style.display === 'block') {
+        details.style.display = 'none';
+      } else {
+        details.style.display = 'block';
+      }
     }
   </script>
 </body>
