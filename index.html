@@ -6,144 +6,59 @@
   <title>Bradley | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f7f5fa;<nav class="nav-links">
-      color: #2d2d2d;
+      background-color: #0e0e1c;
+      color: #e0dfff;
     }
     header {
-      background-color: #6c4bbf;
+      background-color: #1a1a2e;
+      color: #a88eff;
       padding: 1rem 2rem;
-      color: white;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    nav ul.menu li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0 10px;
-    }
-    nav ul.menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
-    .btn {
-      background-color: #6c4bbf;
-      color: white;
-      padding: 0.8rem 1.2rem;
+    .menu-toggle {
+      display: none;
+      background: none;
       border: none;
-      border-radius: 8px;
+      color: #a88eff;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: #a88eff;
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 1rem;
     }
-    .btn:hover {
-      background-color: #5b3fa3;
-    }
-    h2 {
-      color: #6c4bbf;
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin-bottom: 0.6rem;
-      border-bottom: 3px solid #6c4bbf;
-      padding-bottom: 0.3rem;
-    }
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.2rem;
-    }
-    p {
-      line-height: 1.5;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      max-width: 750px;
-    }
-    .profile-pic {
-      max-width: 200px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .contact a {
-      color: #6c4bbf;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact a:hover {
+    nav ul li a:hover {
       text-decoration: underline;
     }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto 3rem auto;
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      nav ul.show {
+        display: flex;
+      }
     }
-    footer {
-      background-color: #6c4bbf;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-    }
-header {
-  position: relative;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #6c4bbf;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 0.5rem 0;
-    color: white;
-    text-align: center;
-  }
-}
-
-
   </style>
 </head>
 <body>
