@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bradley | Compétences</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f7f5fa;
+      background: #f7f5fa;
       color: #2d2d2d;
     }
     header {
       background-color: #6c4bbf;
+      padding: 1.5rem 2rem;
       color: white;
-      padding: 1rem 2rem;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     header h1 {
       margin: 0;
+      font-size: 2rem;
     }
     .container {
       max-width: 900px;
@@ -29,25 +31,27 @@
     .competence {
       background-color: white;
       border-left: 6px solid #6c4bbf;
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     .competence:hover {
-      background-color: #e6e0f7;
+      background-color: #efe6fa;
     }
     .competence h2 {
-      margin-top: 0;
+      margin: 0;
       color: #6c4bbf;
+      font-size: 1.5rem;
     }
     .details {
       display: none;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #333;
+      margin-top: 1rem;
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #3a3a3a;
     }
     .back-link {
       display: block;
@@ -66,39 +70,46 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Mes Compétences</h1>
   </header>
+
   <div class="container">
 
     <div class="competence" onclick="toggleDetails(this)">
-      <h2>Développement Web et Programmation</h2>
+      <h2>Développement Web & Programmation</h2>
       <div class="details">
-        <p>Durant ma formation en BUT Informatique, j’ai acquis de solides compétences en développement web, que j’ai mises en pratique à travers de nombreux projets universitaires. J’ai appris à concevoir des interfaces utilisateurs dynamiques en HTML, CSS et JavaScript, et à les rendre interactives à l’aide de PHP et AJAX. Ces langages me permettent aujourd’hui de créer des applications complètes côté client comme côté serveur.</p>
-        <p>En parallèle, mes recherches personnelles m’ont poussé à explorer plus en profondeur les frameworks modernes, les systèmes de templating et l’utilisation d’outils comme WebSocket pour créer une messagerie temps réel, que j’ai moi-même développée.</p>
+        <p>
+          Le développement web est rapidement devenu une passion que j’ai cultivée autant dans ma formation universitaire que dans mes projets personnels. À l’université, j’ai appris les bases solides de HTML, CSS, JavaScript, PHP et SQL, que j’ai ensuite consolidées au fil des projets. Grâce aux SAÉ, j’ai eu l’occasion de travailler sur des applications web complètes avec interfaces utilisateurs, connexions aux bases de données, traitements dynamiques, etc. Mais c’est surtout en dehors des cours que j’ai découvert la puissance de l’autonomie : j’ai passé des nuits à apprendre WebSocket pour gérer les communications temps réel dans une messagerie, à intégrer AJAX pour fluidifier l’expérience utilisateur, ou encore à configurer PHPMailer pour sécuriser l’envoi d’e-mails. Aujourd’hui, je suis capable de développer un site web complet, fonctionnel, sécurisé et intuitif, tant côté client que côté serveur.
+        </p>
       </div>
     </div>
 
     <div class="competence" onclick="toggleDetails(this)">
-      <h2>Bases de Données</h2>
+      <h2>Bases de Données & Modélisation</h2>
       <div class="details">
-        <p>J’ai appris à modéliser et manipuler des bases de données relationnelles durant mes cours, avec une approche rigoureuse de la normalisation et du langage SQL avancé. J’ai notamment utilisé PostgreSQL pour gérer le stockage des messages et annotations dans mes projets.</p>
-        <p>En première année, j’ai également réalisé un projet de création d’une base de données complète avec MariaDB, où j’ai conçu le schéma, écrit les requêtes de peuplement, et mis en place les relations entre les tables. Cela m’a permis de consolider ma compréhension des bases de données à la fois théoriquement et pratiquement.</p>
+        <p>
+          Manipuler les données efficacement est une compétence essentielle que j’ai développée tout au long de mes études. J’ai appris à concevoir des schémas de bases de données relationnelles, à les normaliser, puis à écrire des requêtes complexes en SQL pour les interroger. J’ai notamment utilisé PostgreSQL dans mes projets universitaires, en particulier dans l’application d’annotation de messages où les données émotionnelles étaient stockées et manipulées en temps réel. En première année, j’ai aussi réalisé un projet de modélisation complet avec MariaDB, depuis la conception UML jusqu’à l’implémentation et le peuplement. Ce travail m’a appris à anticiper les besoins d’une application à travers une structure logique, robuste et évolutive. Grâce à ces expériences, je suis à l’aise avec l’algèbre relationnelle, les jointures, les vues, les index et même les extensions JSON pour enrichir les modèles.
+        </p>
       </div>
     </div>
 
     <div class="competence" onclick="toggleDetails(this)">
-      <h2>Travail en Équipe et Gestion de Projet</h2>
+      <h2>Gestion de Projet & Travail en Équipe</h2>
       <div class="details">
-        <p>Mes expériences universitaires m’ont souvent amené à travailler en groupe, notamment dans le cadre des SAÉ (Situations d’Apprentissage et d'Évaluation). Ces projets collaboratifs m'ont appris à répartir les rôles, fixer des objectifs communs et à communiquer efficacement, tout en respectant des délais serrés.</p>
-        <p>J’ai approfondi ces compétences lors de mon stage chez EDF, où j’ai contribué à la création d’un site SharePoint pour l’équipe RH. Cette expérience m’a permis d’observer et d’appliquer des méthodes de gestion de projet dans un environnement professionnel, tout en collaborant avec différentes parties prenantes de manière efficace.</p>
+        <p>
+          Travailler avec les autres a toujours été une partie fondamentale de mes projets, que ce soit à l’université ou en entreprise. Grâce aux SAÉ, j’ai appris à diviser les tâches, planifier les sprints, établir des plannings réalistes et surtout à collaborer de manière efficace. Ces expériences m’ont permis d’adopter de bonnes pratiques de communication, d’organisation et de gestion du temps. Mon stage chez EDF m’a permis de passer à la vitesse supérieure. J’ai participé à la mise en place d’un site SharePoint destiné à l’équipe RH. J’ai dû recueillir les besoins, proposer des solutions, concevoir l’arborescence et coordonner les validations. Ce projet m’a donné une vraie expérience de terrain en gestion de projet, où chaque détail comptait et où l’alignement entre les utilisateurs et la technique était essentiel. Aujourd’hui, je me sens capable d’assumer un rôle actif dans un groupe, de prendre des initiatives tout en restant à l’écoute.
+        </p>
       </div>
     </div>
+
     <div class="competence" onclick="toggleDetails(this)">
-      <h2>Autonomie et Apprentissage Personnel</h2>
+      <h2>Apprentissage Autonome & Curiosité</h2>
       <div class="details">
-        <p>Au-delà des cours, je consacre régulièrement du temps à apprendre par moi-même, que ce soit via des tutoriels, de la documentation technique ou des projets personnels. Cette habitude m’a permis d’être autonome dans mes démarches, de rester à jour sur les bonnes pratiques, et de progresser rapidement sur des sujets comme l’utilisation de PHPMailer pour l’envoi sécurisé d’emails ou encore l’intégration d’AJAX pour un rendu plus fluide.</p>
-        <p>Cette soif d’apprendre me pousse constamment à explorer de nouvelles technologies et à perfectionner celles que je maîtrise déjà.</p>
+        <p>
+          Ce que j’apprécie le plus dans le domaine de l’informatique, c’est qu’il n’y a pas de fin à l’apprentissage. Dès que je suis confronté à un problème, je prends cela comme une occasion d’en apprendre plus. J’ai passé des heures à lire de la documentation, suivre des tutos avancés, tester des solutions, parfois en échouant, mais toujours en comprenant un peu mieux. Cette démarche m’a permis de m’auto-former sur des outils qui n’étaient pas directement enseignés à l’université comme PHPMailer, les WebSockets ou certaines API JS. J’ai également pris l’habitude de me documenter sur les bonnes pratiques de sécurité, les performances, l’accessibilité et l’expérience utilisateur. Ma curiosité est devenue une force, car elle me pousse à aller au-delà de ce qu’on attend de moi et à anticiper les défis techniques avant qu’ils n’arrivent.
+        </p>
       </div>
     </div>
 
@@ -110,11 +121,7 @@
   <script>
     function toggleDetails(element) {
       const details = element.querySelector('.details');
-      if (details.style.display === 'block') {
-        details.style.display = 'none';
-      } else {
-        details.style.display = 'block';
-      }
+      details.style.display = (details.style.display === 'block') ? 'none' : 'block';
     }
   </script>
 </body>
