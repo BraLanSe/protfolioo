@@ -105,9 +105,9 @@
 
   <div class="container">
 
-    <div class="competence" onclick="toggleSubDetails(event, this)">
+    <div class="sub-competence" onclick="toggleSubDetails(event, this)">
   <h2>Développement Web & Programmation</h2>
-  <div class="details">
+  <div class="sub-details">
 
     <div class="sub-competence" onclick="toggleSubDetails(event, this)">
       <h3>Python</h3>
@@ -197,10 +197,6 @@
   </div>
 
   <script>
-    function toggleDetails(element) {
-      const details = element.querySelector('.details');
-      details.style.display = (details.style.display === 'block') ? 'none' : 'block';
-    }
 
     function toggleInnerDetails(element) {
   event.stopPropagation(); // évite le conflit avec le clic principal
