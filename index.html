@@ -6,60 +6,87 @@
   <title>Bradley | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0e0e1c;
-      color: #e0dfff;
-    }
-    header {
-      background-color: #1a1a2e;
-      color: #a88eff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: #a88eff;
-      font-size: 1.5rem;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;
-    }
-    nav ul li a {
-      color: #a88eff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #1a1a2e;
-        width: 100%;
-        margin-top: 1rem;
-      }
-      nav ul.show {
-        display: flex;
-      }
-    }
-  </style>
+  <style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0e0e1c;
+    color: #e0dfff;
+  }
+
+  header {
+    background-color: #1a1a2e;
+    padding: 1rem 2rem;
+    color: #a88eff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .projects {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .project {
+    background-color: #1f1f38;
+    border-left: 6px solid #6c4bbf;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .project:hover {
+    background-color: #2a2a4a;
+  }
+
+  .project h2 {
+    margin-top: 0;
+    color: #a88eff;
+  }
+
+  .project p {
+    margin: 0.5rem 0;
+    color: #dcd8f5;
+  }
+
+  .details {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #d8d4f0;
+  }
+
+  .details ul {
+    margin-top: 0.3rem;
+    padding-left: 1.2rem;
+  }
+
+  .back-link {
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .back-link a {
+    color: #a88eff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+</style>
+
 </head>
 <body>
 
