@@ -67,6 +67,34 @@
     .back-link a:hover {
       text-decoration: underline;
     }
+
+    .sub-competence {
+  background-color: #f1ecfc;
+  border-left: 4px solid #9b7ede;
+  border-radius: 8px;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sub-competence:hover {
+  background-color: #e3dbf7;
+}
+
+.sub-competence h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #4c32a3;
+}
+
+.sub-details {
+  display: none;
+  margin-top: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
   </style>
 </head>
 <body>
@@ -184,7 +212,17 @@
   }
 }
 
-    
+  function toggleDetails(element) {
+    const details = element.querySelector('.details');
+    details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+  }
+
+  function toggleSubDetails(event, element) {
+    event.stopPropagation(); // Empêche d'ouvrir/fermer la section principale
+    const subDetails = element.querySelector('.sub-details');
+    subDetails.style.display = (subDetails.style.display === 'block') ? 'none' : 'block';
+  }
+ 
   </script>
 </body>
 </html>
