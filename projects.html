@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bradley | Projets</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-<style>
+  <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f7f5fa;
-      color: #2d2d2d;
+      background-color: #0e0e1c;
+      color: #e0dfff;
     }
     header {
-      background-color: #6c4bbf;
+      background-color: #1a1a2e;
       padding: 1rem 2rem;
-      color: white;
+      color: #a88eff;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
     h1 {
       margin: 0;
@@ -27,19 +28,47 @@
       padding: 1rem;
     }
     .project {
-      background-color: white;
+      background-color: #1f1f38;
       border-left: 6px solid #6c4bbf;
       border-radius: 10px;
       padding: 1rem 1.5rem;
       margin-bottom: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+    }
+    .project:hover {
+      background-color: #2a2a4a;
     }
     .project h2 {
       margin-top: 0;
-      color: #6c4bbf;
+      color: #a88eff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .project p {
       margin: 0.5rem 0;
+      color: #dcd8f5;
+    }
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      font-size: 0.95rem;
+      padding: 0 0;
+    }
+    .project.open .details {
+      max-height: 1000px;
+      padding-top: 1rem;
+    }
+    .arrow {
+      transition: transform 0.3s ease;
+      font-size: 1.2rem;
+    }
+    .project.open .arrow {
+      transform: rotate(90deg);
     }
     .back-link {
       display: block;
@@ -47,12 +76,14 @@
       text-align: center;
     }
     .back-link a {
-      color: #6c4bbf;
+      color: #a88eff;
       text-decoration: none;
       font-weight: bold;
     }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
   </style>
-
 </head>
 <body>
   <header>
@@ -62,44 +93,39 @@
   <section class="projects">
 
     <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
-      <h2>Application de Messagerie & Annotation d’Émotions</h2>
+      <h2>
+        Application de Messagerie & Annotation d’Émotions
+        <span class="arrow">▶</span>
+      </h2>
       <p>Une messagerie en temps réel enrichie d’un système d’analyse émotionnelle, pensée pour les services clients.</p>
       <div class="details">
-        <p>
-          Dans ce projet ambitieux, j’ai conçu une application de messagerie interactive permettant aux utilisateurs d’échanger en temps réel via WebSocket. L’une des particularités du projet est son système d’annotation émotionnelle intégré, qui permet de classer chaque message en trois catégories : positif, neutre ou négatif. L’objectif était de fournir un outil utile à un service client, capable d’analyser le ressenti des clients en temps réel.
-        </p>
-        <p>
-          L’interface, développée en PHP, JavaScript, HTML et CSS permettait une navigation fluide, sans rechargement de page, et s’adaptait à tous les supports. J’ai également implémenté une fonctionnalité de création de compte avec confirmation par email via PHPMailer, ainsi qu’un système de sessions pour sécuriser les connexions.
-        </p>
-        <p>
-          Toutes les données, y compris les messages et les annotations, étaient stockées dans une base SQL. Ce projet m’a permis de me familiariser avec la gestion du temps réel, la communication client-serveur, la sécurité des données et l'expérience utilisateur, tout en renforçant mes compétences full-stack.
-        </p>
+        <p>Dans ce projet ambitieux, j’ai conçu une application de messagerie interactive permettant aux utilisateurs d’échanger en temps réel via WebSocket...</p>
+        <p>L’interface, développée en PHP, JavaScript, HTML et CSS permettait une navigation fluide...</p>
+        <p>Toutes les données, y compris les messages et les annotations, étaient stockées dans une base SQL...</p>
       </div>
     </div>
 
     <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
-      <h2>Stage chez EDF – Création d’un Espace RH sur SharePoint</h2>
+      <h2>
+        Stage chez EDF – Création d’un Espace RH sur SharePoint
+        <span class="arrow">▶</span>
+      </h2>
       <p>Un stage en environnement industriel où j’ai conçu un espace collaboratif pour les ressources humaines.</p>
       <div class="details">
-        <p>
-          Lors de mon stage chez EDF, j’ai été chargé de créer un site SharePoint destiné à l’équipe RH. Ce site servait de hub interne pour centraliser documents, formulaires, plannings et suivis de projets. J’ai personnalisé entièrement la structure du site, en veillant à sa facilité d’utilisation et à l’ergonomie pour des utilisateurs non techniques.
-        </p>
-        <p>
-          J’ai également mis en place des outils de gestion de projet, comme des tableaux de suivi, et j’ai accompagné l’équipe dans la prise en main de la plateforme. Ce stage m’a permis de découvrir un environnement professionnel exigeant, de comprendre les enjeux de la transformation numérique dans une grande entreprise, et de développer mes compétences en gestion de projet, communication et autonomie.
-        </p>
+        <p>Lors de mon stage chez EDF, j’ai été chargé de créer un site SharePoint destiné à l’équipe RH...</p>
+        <p>J’ai également mis en place des outils de gestion de projet...</p>
       </div>
     </div>
 
     <div class="project" onclick="toggleDetails(this)" tabindex="0" onkeypress="if(event.key==='Enter') toggleDetails(this);">
-      <h2>Base de Données – Projet de Première Année</h2>
+      <h2>
+        Base de Données – Projet de Première Année
+        <span class="arrow">▶</span>
+      </h2>
       <p>Création complète d’une base de données relationnelle avec MariaDB, de la modélisation à la requête.</p>
       <div class="details">
-        <p>
-          Ce projet académique m’a permis de mettre en pratique toutes les étapes de conception d’une base de données relationnelle. J’ai d’abord réalisé une modélisation UML à partir d’un cahier des charges, puis j’ai traduit ce modèle en schéma relationnel normalisé. À partir de là, j’ai créé les tables, défini les relations et les clés, et implémenté le tout dans MariaDB.
-        </p>
-        <p>
-          Une fois la structure en place, j’ai développé un script de peuplement pour insérer des jeux de données réalistes. Enfin, j’ai écrit des requêtes SQL complexes (jointures, agrégats, vues) afin d’extraire les informations pertinentes. Ce projet m’a permis de consolider mes bases en modélisation, normalisation et langage SQL, fondamentaux pour tout travail de back-end ou de data.
-        </p>
+        <p>Ce projet académique m’a permis de mettre en pratique toutes les étapes de conception d’une base de données relationnelle...</p>
+        <p>J’ai développé un script de peuplement pour insérer des jeux de données réalistes...</p>
       </div>
     </div>
 
@@ -111,14 +137,8 @@
 
   <script>
     function toggleDetails(projectDiv) {
-      const details = projectDiv.querySelector('.details');
-      if (details.style.display === 'block') {
-        details.style.display = 'none';
-      } else {
-        details.style.display = 'block';
-      }
+      projectDiv.classList.toggle('open');
     }
   </script>
-
 </body>
 </html>
