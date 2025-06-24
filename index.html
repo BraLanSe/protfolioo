@@ -7,51 +7,161 @@
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-header {
-  position: relative;
-}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f4f5f7;
+      color: #2c2c2c;
+    }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  cursor: pointer;
-}
+    header {
+      background-color: #4c6ef5;
+      padding: 1rem 2rem;
+      color: white;
+      position: relative;
+    }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      cursor: pointer;
+    }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #6c4bbf;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-  }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
 
-  .nav-links.show {
-    display: flex;
-  }
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .nav-links a {
-    padding: 0.5rem 0;
-    color: white;
-    text-align: center;
-  }
-}
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      padding: 0;
+      margin: 0;
+    }
 
-</style>
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #4c6ef5;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 0.5rem 0;
+        color: white;
+        text-align: center;
+      }
+
+      .menu {
+        flex-direction: column;
+      }
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero {
+      text-align: center;
+      background-color: #edf0ff;
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #4c6ef5;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      background-color: #4c6ef5;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #3b5bdb;
+    }
+
+    .about img.profile-pic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+      border: 4px solid #4c6ef5;
+    }
+
+    h2 {
+      color: #4c6ef5;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .contact a {
+      color: #4c6ef5;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4c6ef5;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -73,21 +183,22 @@ header {
   <section id="home" class="hero">
     <h2>Accueil</h2>
     <h1>Bradley Landim</h1>
-    <p>Etudiant en BUT informatique</p>
+    <p>Étudiant en BUT Informatique</p>
     <a href="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/CV.LANDIM+Bradley.pdf" class="btn" target="_blank" rel="noopener">Télécharger mon CV</a>
   </section>
 
   <section id="about" class="about">
     <h2>À propos</h2>
     <img src="https://raw.githubusercontent.com/BraLanSe/protfolioo/main/Screenshot_20250617_160012_Gallery.jpg" alt="Bradley Landim" class="profile-pic" />
-    <p>Je m'appelle Bradley Landim, étudiant en BUT Informatique à l'Université Sorbonne Paris Nord. Passionné par le développement système, les réseaux et la cybersécurité, j’ai acquis au fil de ma formation et mes projets des compétences techniques solides ainsi qu’une grande rigueur professionnelle. La formation BUT Informatique est un cursus professionnalisant de trois ans, centré sur la conception, le développement et la sécurisation d’applications informatiques. Elle combine cours théoriques, projets pratiques et stages en entreprise, permettant d’intégrer parfaitement la réalité du monde professionnel.</p>
+    <p>Je m'appelle Bradley Landim, étudiant en BUT Informatique à l'Université Sorbonne Paris Nord. Passionné par le développement système, les réseaux et la cybersécurité, j’ai acquis au fil de ma formation et mes projets des compétences techniques solides ainsi qu’une grande rigueur professionnelle.</p>
+    <p>La formation BUT Informatique est un cursus professionnalisant de trois ans, centré sur la conception, le développement et la sécurisation d’applications informatiques. Elle combine cours théoriques, projets pratiques et stages en entreprise, permettant d’intégrer parfaitement la réalité du monde professionnel.</p>
   </section>
 
   <section id="goals" class="goals">
     <h2>Objectifs</h2>
-    <p>Après l’obtention de mon BUT Informatique, je souhaite me spécialiser dans la cybersécurité ou le développement système. Mon objectif est d’intégrer un Master ou une école d’ingénieur en alternance pour approfondir mes compétences techniques, notamment en sécurité réseau, cryptographie, systèmes embarqués et audit informatique. Mon objectif principal serait de travailer dans une banque ou dans les secteurs public comme le ministère, en contribuent efficacement à la protection des infrastructures informatiques, tout en participant à des projets à fort impact technologique et sociétal, en France ou à l’international.</p>
+    <p>Après l’obtention de mon BUT Informatique, je souhaite me spécialiser dans la cybersécurité ou le développement système. Mon objectif est d’intégrer un Master ou une école d’ingénieur en alternance pour approfondir mes compétences techniques, notamment en sécurité réseau, cryptographie, systèmes embarqués et audit informatique.</p>
+    <p>Mon objectif principal serait de travailler dans une banque ou dans le secteur public comme le ministère, en contribuant efficacement à la protection des infrastructures informatiques, tout en participant à des projets à fort impact technologique et sociétal, en France ou à l’international.</p>
   </section>
-
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
@@ -102,11 +213,11 @@ header {
   </footer>
 
   <script>
-  function toggleMenu() {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.toggle('show');
-  }
-</script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
